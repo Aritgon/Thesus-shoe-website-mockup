@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive website project | Arit gon</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- google font links -->
+    <!-- Header link & normal links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- remixicon link -->
+     <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+    <!-- nav section -->
+    <nav class="nav-section">
+            <div class="header-logo">
+                <h1>THESUS</h1>
+                <p>Socially and Environmentally Progressive</p>
+            </div>
+            <!-- a bit off from the project but its better to follow this pattern, this section to be toggled on after 1000px -->
+            <div class="nav-menu">
+                <ul class="nav-menu-list">
+                    <li>Rain</li>
+                    <li>Snow</li>
+                    <li>The Weekend Boot</li>
+                    <li>Shop All</li>
+                    <li>About us</li>
+                </ul>
+            </div>
+        <div class="collapse-menu">
+            <span><a href="#"><i class="ri-search-2-line"></i></a></span>
+            <span><a href="#"><i class="ri-shopping-bag-4-line"></i></a></span>
+            <span><a href="#"><i class="ri-menu-line"></i></a></span>
+            <!-- span icon of user account to be toggled off after the max-width of 500px -->
+             <span><a href="#"><i class="ri-user-line"></i></a></span>
+        <!-- toggled on nav-menu -->
+        </div>
+    </nav>
+    <!-- banner section -->
+    <section class="banner-section">
+        <div class="image-container">
+            <!-- background photo be given in the CSS file -->
+        </div>
+        <!-- Div to be toggled at 1000 px above the background image of the section -->
+         <div class="banner-caption-container">
+            <p class="main-banner">SUMMER SALE - 20% off</p>
+            <button type="button" class="banner-cta">Use code SUMMER20 at checkout</button>
+         </div>
+    </section>
+    <!-- rich text content container -->
+     <section class="rich-text-content-container">
+        <p>The next best thing to walking barefoot.</p>
+        <p>#ZeroWaste</p>
+     </section>
+    <!-- slider menu section -->
+     <section class="slider-menu-section">
+        <div class="slider-menu-container">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="menu-image">
+                <p>Rain <i class="ri-arrow-right-line"></i></p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2hvZXxlbnwwfHwwfHx8MA%3D%3D" class="menu-image">
+                <p>All weather <i class="ri-arrow-right-line"></i></p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHNob2V8ZW58MHx8MHx8fDA%3D" class="menu-image">
+                <p>Snow <i class="ri-arrow-right-line"></i></p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1603487742131-4160ec999306?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FuZGFsfGVufDB8fDB8fHww" class="menu-image">
+                <p>Sun <i class="ri-arrow-right-line"></i></p>
+            </div>
+        </div>
+     </section>
+    <!-- card section -->
+    <section class="card-section">
+        <!-- caption div -->
+        <div class="card-caption">
+            <p>Get them Before They're Gone!</p>
+            <p>Sizes are running out, get your pair before they are gone.</p>
+        </div>
+        <!-- grid card item div -->
+         <div class="card-items">
+            <!-- cards -->
+             <div class="cards">
+                <img src="https://images.unsplash.com/photo-1546367564-ade1880f8921?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-item-image">
+                <p class="card-item-header">The Allegra Weekend Boot</p>
+                <span><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i></span>
+                <div class="card-item-image-price">
+                    <p><strike>Rs. 21,300.00</strike></p> <p>Rs. 16,100.00</p>
+                </div>
+                <button type="button" class="card-item-image-price-btn">Choose options</button>
+             </div>
+             <div class="cards">
+                <img src="https://images.unsplash.com/photo-1605812860427-4024433a70fd?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-item-image">
+                <p class="card-item-header">The Weekend Boot Beige</p>
+                <span><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i></span>
+                <div class="card-item-image-price">
+                    <p><strike>Rs. 21,300.00</strike></p> <p>Rs. 16,100.00</p>
+                </div>
+                <button type="button" class="card-item-image-price-btn">Choose options</button>
+             </div>
+             <div class="cards">
+                <img src="https://images.unsplash.com/photo-1554133724-a22ead39af6b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-item-image">
+                <p class="card-item-header">The Weekend Boot in Cuero</p>
+                <span><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i></span>
+                <div class="card-item-image-price">
+                    <p><strike>Rs. 21,300.00</strike></p> <p>Rs. 16,100.00</p>
+                </div>
+                <button type="button" class="card-item-image-price-btn">Choose options</button>
+             </div>
+             <div class="cards">
+                <img src="https://images.unsplash.com/photo-1554133527-37c387aaa4eb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-item-image">
+                <p class="card-item-header">The Weekend Boot in Sage</p>
+                <span><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i></span>
+                <div class="card-item-image-price">
+                    <p><strike>Rs. 21,300.00</strike></p> <p>Rs. 16,100.00</p>
+                </div>
+                <button type="button" class="card-item-image-price-btn">Choose options</button>
+             </div>
+             <div class="cards">
+                <img src="https://images.unsplash.com/photo-1725387023639-28e9a42a83b1?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-item-image">
+                <p class="card-item-header">The Weekend Boot Z in black</p>
+                <span><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i></span>
+                <div class="card-item-image-price">
+                    <p><strike>Rs. 21,300.00</strike></p> <p>Rs. 16,100.00</p>
+                </div>
+                <button type="button" class="card-item-image-price-btn">Choose options</button>
+             </div>
+             <div class="cards">
+                <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-item-image">
+                <p class="card-item-header">The Weekend Boot in black</p>
+                <span><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i></span>
+                <div class="card-item-image-price">
+                    <p><strike>Rs. 21,300.00</strike></p> <p>Rs. 16,100.00</p>
+                </div>
+                <button type="button" class="card-item-image-price-btn">Choose options</button>
+             </div>
+         </div>
+         <button type="button" class="view-btn">View all</button>
+    </section>
+    <!-- image with text section -->
+    <section class="image-with-text-container">
+        <!-- image div -->
+         <div class="image-with-text image">
+            <img src="https://thesusoutdoors.com/cdn/shop/files/SustainableMaterialsSectionHomepage.png?v=1699600794&width=1070" alt="">
+         </div>
+         <!-- caption holder -->
+          <div class="image-with-text text">
+            <h2>Thesus footwear is thoughtfully designed from natural and recycled materials</h2>
+            <p>Each pair diverts 1-2 kg of waste from our waterways and landfill, reduces 20kg of CO2 from the atmosphere, and conserves 10L of water when compared to your traditional leather boot.</p>
+            <button type="button" class="image-with-text cta">Learn more</button>
+          </div>
+    </section>
+    <!-- bestseller-rich-text-container -->
+    <section class="bestseller-rich-text-container">
+        <p>Thesus Bestsellers</p>
+    </section>
+    <!-- bestseller slider menu section -->
+    <section class="bestseller-slider-menu-section">
+        <div class="slider-cards-container">
+            <!-- slider cards -->
+             <div class="slider-cards">
+                <img src="https://thesusoutdoors.com/cdn/shop/files/thesus-bestsellers1.png?v=1699432540&width=750" class="slider image">
+                <p>The Anyday Rain Boot in Black <i class="ri-arrow-right-line"></i></p>
+             </div>
+             <div class="slider-cards">
+                <img src="https://thesusoutdoors.com/cdn/shop/files/thesus-bestsellers2.png?v=1699432541&width=750" class="slider image">
+                <p>The Weekend Boot in Beige <i class="ri-arrow-right-line"></i></p>
+             </div>
+             <div class="slider-cards">
+                <img src="https://thesusoutdoors.com/cdn/shop/files/thesus-bestsellers3.png?v=1699432540&width=750" class="slider image">
+                <p>The Modern Winter Boot <i class="ri-arrow-right-line"></i></p>
+             </div>
+             <div class="slider-cards">
+                <img src="https://thesusoutdoors.com/cdn/shop/files/thesus-bestsellers4.png?v=1699432541&width=750" class="slider image">
+                <p>The Weekend Boot in Saige <i class="ri-arrow-right-line"></i></p>
+             </div>
+        </div>
+        <button type="button" class="best-seller-slider-btn">Shop Bestsellers</button>
+    </section>
+    <!-- accordion menu section -->
+    <section class="accordion-menu-section">
+        <div class="accordion-menu-container">
+            <!-- a div to contain headers -->
+            <div class="accordion-menu-header">
+                <h1>Try Them Out!</h1>
+                <p class="subtext">Just contact our team for support!</p>
+            </div>
+
+            <!-- div to contain the menus -->
+            <div class="menu-holder">
+                <div class="menu">
+                    <button class="accordion-btn" type="button">
+                        <span>📏 Find your size</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="content">Check out our size guide to find your perfect match!</div>
+                </div>
+
+                <div class="menu">
+                    <button class="accordion-btn" type="button">
+                        <span>🚚 Free shipping in America</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="content">Free shipping for orders over $100 in North America including duties and customs.</div>
+                </div>
+
+                <div class="menu">
+                    <button class="accordion-btn" type="button">
+                        <span>🡨 Easy returns</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="content">Easy returns in North America within 30 days Just contact our team for support!</div>
+                </div>
+
+                <div class="menu">
+                    <button class="accordion-btn" type="button">
+                        <span>🏷️ pay in 4</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="content">Buy now, pay later! Pay in 4 easy instalments. Option at checkout.</div>
+                </div>
+
+
+            </div>
+            <!-- a CTA button -->
+            <button type="button" class="accordion-section-cta">Shop All</button>
+
+
+        </div>
+    </section>
+    <!-- testimonial section -->
+    <section class="testimonial-section">
+        <div class="testimonial-container">
+
+            <div class="testimonial-caption">
+                <h2>*****</h2>
+                <i>"The Weekend Boots have a very nice padding in the sole which makes it comfortable to wear for long periods of time and these shoes definitely fit very true to size."</i>
+                <p>Claire</p>
+            </div>
+
+            <div class="testimonial-image">
+                <img src="https://thesusoutdoors.com/cdn/shop/files/IMG_0116_Webcopy_fc954dc1-e884-4990-8074-610e2ce000fe.jpg?v=1686324989&width=1284">
+            </div>
+            
+        </div>
+    </section>
+
+
+
+    <!-- Script file -->
+     <script src="script.js"></script>
+</body>
+</html>

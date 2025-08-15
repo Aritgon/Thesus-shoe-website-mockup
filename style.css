@@ -1,0 +1,928 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: var(--def-font-color);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--def-background-color);
+}
+
+:root {
+    --def-para-font-size: 16px;
+    --def-container-width: 80%;
+    --def-background-color: ffffff;
+    --def-font-color: #123026;
+}
+
+/* maintaining A mobile first approach min-width (320px) */
+.nav-section {
+    position: sticky;
+    top: 0;
+    border: 2px solid black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(10px, 6px + 2vw, 18px) clamp(6px, 5px + 2vw, 8px); /* this could be the default padding structure for every container */
+    text-decoration: none;
+    line-height: 1.3;
+    background-color: #f4f4f4;
+    z-index: 10;
+
+    & .header-logo {
+        /* border: 2px solid red; */
+
+        & h1 {
+            font-family: "Michroma", sans-serif;
+            font-size: clamp(1.5em, 2vw + 0.8em, 2em);
+        }
+        & p {
+            font-size: 8px;
+            text-align: left;
+        }
+    }
+
+    /* nav-menu toggled off in mobile first approach */
+    & .nav-menu {
+        display: none;
+    }
+
+    & .collapse-menu > span > a {
+        /* border: 2px solid black; */
+        text-align: center;
+        text-decoration: none;
+        color: var(--def-font-color);
+        font-size: clamp(1.3em, 1em + 2vw, 1.8em);
+        margin-left: 6px;
+    }
+
+
+    & .collapse-menu > span:nth-child(4) {
+        display: none;
+    }
+
+}
+.banner-section {
+    border: 2px solid red;
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    & .image-container {
+        /* border: 2px solid green; */
+        height: 60vh;
+        width: 100%;
+        background-image: url("https://thesusoutdoors.com/cdn/shop/files/June_hero_2025_-_thesus.png?v=1749124881&width=2000");
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* this div to be toggled upward after hitting min-width of 768px at screen size */
+    & .banner-caption-container {
+        width: 100%;
+        display: grid;
+        place-content: center;
+        justify-items: center;
+        /* border: 2px solid green; */
+        gap: 25px;
+        padding: 4em;
+        text-align: center;
+        background: #f3f3f3;
+        
+        & .main-banner {
+            font-size: 52px;
+            font-weight: 600;
+            color: var(--def-font-color);
+            line-height: 1.1;
+        }
+
+        & .banner-cta {
+            width: clamp(12em, 10em + 2vw, 16em);
+            border-radius: 8px;
+            padding: 0.6em 0.7em;
+            font-size: clamp(12px, 13px + 2vw, 20px);
+            color: var(--def-font-color);
+            font-family: "Poppins", sans-serif;
+            line-height: 1.3;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.8);
+            cursor: pointer;
+        }
+}   
+}
+.rich-text-content-container {
+    border: 2px solid saddlebrown;
+    padding: 2.5em 1.5em; /*most important for this section*/
+    text-align: center;
+    line-height: 1.2;
+    color: var(--def-font-color);
+    font-size: clamp(20px, 25px + 2vw, 52px);
+    font-weight: 550;
+    /* change font size at min-width 1000px */
+}
+.slider-menu-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5em 1em;
+    border: 2px solid chartreuse;
+
+    & .slider-menu-container {
+        width: 100%;
+        /* border: 2px solid blue; */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.6em;
+
+        & .menu-item {
+            background: #eee;
+            /* border: 2px solid brown; */
+            overflow: hidden;
+            padding-bottom: 0.6em;
+            max-height: auto;
+            /* border-radius: 8px; */
+
+            & img {
+                height: 20vh;
+                width: 100%;
+                overflow: hidden;
+                object-fit: cover;
+            }
+
+            & p {
+                font-size: 15px;
+                margin-left: 5px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+.card-section {
+    border: 2px solid red;
+    background: #f3f3f3;
+    width: 100%;
+    height: auto;
+    padding: 0 0.7em;
+    display: flex;
+    flex-direction: column;
+
+    & .card-caption {
+        /* border: 2px solid green; */
+        padding: 3em 2.2em;
+        text-align: center;
+
+        & :nth-child(1) {
+            font-size: clamp(26px, 25px + 2vw, 42px);
+            font-weight: 600;
+            line-height: 1.2;
+            padding-bottom: 12px;
+        }
+
+        & :nth-child(2) {
+            font-size: clamp(15px, 11px + 2vw, 20px);
+            font-weight: 300;
+        }
+    }
+
+    & .card-items {
+        /* border: 4px dashed black; */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 1em;
+
+        & .cards {
+            /* border: 2px solid green; */
+            width: 100%;
+            overflow: hidden;
+            padding-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.4em;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+
+            & img {
+                object-fit: cover;
+                height: 20vh;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            & .card-item-header {
+                font-size: clamp(8px, 10px + 1vw, 16px);
+                font-weight: 600;
+            }
+
+            & span > i {
+                font-size: 13px;
+            }
+
+            & .card-item-image-price {
+                display: flex;
+                gap: 3px;
+                flex-wrap: wrap;
+                flex: 1;
+            }
+
+            & .card-item-image-price-btn {
+                background: none;
+                font-size: 14px;
+                padding: clamp(6px, 0.5vw, 8px) clamp(8px, 2vw, 18px);
+                font-weight: 400;
+                border-radius: 8px;
+                color: #123026;
+                border: 1.5px solid #123026;
+                /* align-self: center; */
+            }
+        }
+    }
+
+    /* A div section to be toggle on after hitting near 1000 px */
+
+    & .view-btn {
+            margin-top: 3em;
+            background: none;
+            font-size: 16px;
+            padding: 8px 18px;
+            font-weight: 400;
+            border-radius: 8px;
+            color: #123026;
+            border: 2px solid #123026;
+            align-self: center;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.8);
+            cursor: pointer;
+    }
+}
+.image-with-text-container {
+    margin-top: 3.5em;
+    width: 100%;
+    border: 2px solid red;
+    padding: 0 0.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    background: #f3f3f3;
+
+    & .image {
+        border: 2px solid black;
+        max-height: 80vh;
+        overflow: hidden;
+        max-width: 100%;
+
+        & img {
+            height: 100%;
+            width: 100%;
+            background: url("https://thesusoutdoors.com/cdn/shop/files/SustainableMaterialsSectionHomepage.png?v=1699600794&width=1070");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    & .text {
+        border: 2px solid red;
+        padding: 2em 3.2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+
+        & :nth-child(1) {
+            font-size: clamp(1.8em, 1.6em + 2vw, 2em);
+            font-weight: 500;
+            line-height: 1.35;
+        }
+
+        & :nth-child(2) {
+            color: #1a4f3c;
+        }
+        & :nth-child(3) {
+            background: var(--def-font-color);
+            color: #fff;
+            padding: 0.8em 1.8em;
+            border: none;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+    }
+}
+.bestseller-rich-text-container {
+    max-width: 100%;
+    padding: 2em 0;
+    text-align: center;
+    font-size: clamp(24px, 32px + 2vw, 42px);
+    line-height: 1.2;
+    font-weight: 450;
+    border: 2px dashed black;
+}
+.bestseller-slider-menu-section {
+    border: 2px solid hotpink;
+    padding: 0 0 3em 0;
+    display: grid;
+    justify-items: center;
+    gap: 4em;
+
+    & .slider-cards-container {
+        max-width: 100%; /*width is always important if you are doing mobile first approach */
+        border: 2px solid red;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.3em;
+
+        & .slider-cards {
+            background: #f3f3f3;
+            height: auto;
+            /* border: 2px dashed violet; */
+            width: 100%;
+            overflow: hidden;
+
+            & img {
+                max-height: 35vh;
+                width: 100%;
+                overflow: hidden;
+            }
+            
+            & p {
+                padding: 2em 1.5em;
+                line-height: 2;
+            }
+        }
+    }
+    & .best-seller-slider-btn {
+        padding: 1em;
+        max-width: 70%;
+        background: var(--def-font-color);
+        font-size: var(--def-para-font-size);
+        font-weight: 400;
+        color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+/* accordion menu section */
+.accordion-menu-section {
+    border: 2px solid slateblue;
+}
+.accordion-menu-container {
+    width: 100%;
+    border: 2px solid blue;
+    padding: 5em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4em;
+    background: #f3f3f3;
+}
+.accordion-menu-container .accordion-menu-header {
+    border: 2px dashed green;
+    text-align: center;
+    padding: 1em;
+
+    & :nth-child(1) {
+        font-size: clamp(24px, 24px + 2vw, 40px);
+        font-weight: 600;
+        margin-bottom: 0.6em;
+    }
+    & :nth-child(2) {
+        font-size: clamp(12px, 10px + 2vw, 20px);
+    }
+}
+.accordion-menu-container .menu-holder {
+    /* border: 1px solid red; */
+    width: 100%;
+}
+.accordion-menu-container .menu-holder .menu {
+    /* border: 1px solid #15583f; */
+
+    & button {
+        width: 100%;
+        padding: 1em 0.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: clamp(8px, 6px + 2vw, 18px);
+        border: none;
+        border-top: 1px solid var(--def-font-color);
+        background: #e4e4e4;
+    }
+
+    & .content {
+        display: none; /*It is none because in JS it will be toggled on */
+        width: 100%;
+        padding: 0.8em;
+        font-size: clamp(12px, 10px + 2vw, 18px);
+    }
+}
+.accordion-menu-container .accordion-section-cta {
+    max-width: 60%;
+    padding: 1em 2em;
+    border: none;
+    background: var(--def-font-color);
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* New class is created because JS implementation starts here for the accordion menu */
+.accordion-menu-container .menu-holder .menu.active .content {
+    display: block;
+}
+/* accordion menu section ends */
+
+.testimonial-section {
+    border: 4px solid purple;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 2em 0.5em;
+
+    & .testimonial-container {
+        /* border: 6px dashed salmon; */
+        /* padding: 2em 0; */
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1em;
+
+        & .testimonial-caption {
+            /* border: 10px solid orangered; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            padding: 0 2.5em;
+            text-align: center;
+
+            & :nth-child(1) {
+                font-size: clamp(24px, 28px + 2vw, 40px);
+                font-weight: 600;
+            }
+            & :nth-child(2) {
+                font-size: clamp(12px, 10px + 2vw, 20px);
+                font-weight: 300;
+                color: #123026; /* this is the default font color */
+            }
+    }
+
+        & .testimonial-image {
+            /* border: 2px solid black; */
+            width: 100%;
+            max-height: 90vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+}
+}
+
+
+
+
+
+
+
+
+
+
+/* media queries as screen size grows (md : 768px, l: 1000px, xl : above 1200px) */
+
+/* using max-width 500px to toggle of user login icon */
+@media screen and (min-width: 500px) {
+    .card-section .card-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* breaking point of image-with-text-container at 592px */
+@media screen and (min-width: 592px) {
+    .image-with-text-container {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+    .image-with-text-container .text {
+        padding: 2em 2.5em;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .banner-section {
+        
+    & .banner-caption-container {
+        /* new stuff added here */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: transparent;
+        width: 100%;
+        z-index: 2;
+        /* --------------------------- */
+        & .main-banner {
+            color: #fff;
+
+        }
+        & .banner-cta {
+            /* new stuff */
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            box-shadow: none;
+            /* ----------------------- */
+        }
+}   
+}
+    .slider-menu-section {
+    /* border: 2px solid chartreuse; */
+
+    & .slider-menu-container {
+        /* new stuff */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1em;
+        /* ------------- */
+
+        & .menu-item {
+            /* new stuff */
+            max-height: 30vh;
+            /* -------- */
+
+            & img {
+                /* new stuff */
+                height: 25vh;
+                /* ------------ */
+            }
+
+        }
+    }
+}
+    .card-section {
+    padding: 0.8em;
+
+    & .card-items {
+        /* new stuff */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    /* A div section to be toggle on after hitting near 1000 px */
+
+}
+    .accordion-menu-container .menu-holder {
+    /* border: 1px solid red; */
+        width: 70%;
+}
+
+    .testimonial-section {
+
+    & .testimonial-container {
+        /* border: 6px dashed salmon; */
+        width: 80%;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1em;
+    }
+}
+}
+
+
+
+
+
+
+/* screen breakpoint : 1000px, targetting tablet to laptop screens */
+@media screen and (min-width: 1000px) {
+
+    .nav-section {
+    /* Toggled off nav-menu is displayed here after the min screen-size hits 1000px */
+    width: 90%;
+    margin: 0 auto;
+    /* border: 2px solid black; */
+
+    & .nav-menu {
+        display: none;
+
+        & .nav-menu-list {
+            display: flex;
+            list-style-type: none;
+            gap: 1.4em;
+            font-size: 17px;
+
+            & :nth-child(1) {
+                color: #cf4222;
+            }
+        }
+    }
+
+    & .collapse-menu > span > a {
+        font-size: 1.8em;
+        margin-left: 0.6em;
+    }
+
+    /* hamburger menu off
+    & .collapse-menu > span:nth-child(3) {
+        display: block;
+    } */
+
+}
+
+    .slider-menu-section {
+        & .slider-menu-container {
+            border: 2px solid green;
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            & .menu-item {
+                background: #eee;
+                /* border: 2px solid brown; */
+                overflow: hidden;
+                padding-bottom: 0.6em;
+                /* new stuff */
+                max-height: 40vh;
+
+            & img {
+                /* new stuff */
+                height: 32vh;
+                width: 100%;
+                overflow: hidden;
+                object-fit: cover;
+            }
+
+            & p {
+                font-size: clamp(12px, 12px + 2vw, 18px);
+                margin-left: 5px;
+                font-weight: 500;
+            }
+        }
+
+        }
+
+}
+
+    .card-section {
+    padding: 1em;
+
+    & .card-items {
+        /* new stuff */
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        /* --------- */
+        & .cards {
+            /* new stuff */
+            gap: 0.6em;
+
+            & img {
+                /* new stuff */
+                height: 30vh;
+            }
+
+        }
+    }
+
+}
+
+    .image-with-text-container {
+    margin-top: 3.5em;
+    width: 100%;
+    border: 2px solid red;
+    padding: 0 4em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1em;
+
+    & .image {
+        /* border: 2px solid black; */
+        max-height: 90vh;
+        overflow: hidden;
+        max-width: 100%;
+
+        & img {
+            height: 100%;
+            width: 100%;
+            background: url("https://thesusoutdoors.com/cdn/shop/files/SustainableMaterialsSectionHomepage.png?v=1699600794&width=1070");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    & .text {
+        padding: 2em 3.2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2em;
+
+        & :nth-child(1) {
+            font-size: clamp(1.8em, 1.6em + 2vw, 2em);
+            font-weight: 500;
+            line-height: 1.35;
+        }
+
+        & :nth-child(2) {
+            color: #1a4f3c;
+        }
+        & :nth-child(3) {
+            background: var(--def-font-color);
+            color: #fff;
+            padding: 0.8em 1.8em;
+            border: none;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+    }
+}
+    .bestseller-slider-menu-section {
+
+    & .slider-cards-container {
+        /* new stuff */
+        max-width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 0 2em;
+        /* ---------------- */
+        gap: 0.5em;
+
+        & .slider-cards {
+            background: #f3f3f3;
+            height: auto;
+            /* border: 2px dashed violet; */
+            width: 100%;
+            overflow: hidden;
+
+            & img {
+                max-height: 50vh;
+                width: 100%;
+                overflow: hidden;
+            }
+            
+            & p {
+                padding: 2em 1.5em;
+                line-height: 2;
+            }
+        }
+    }
+}
+}
+
+
+
+/* screen breakpoint : 1200px, larger PC screen and laptop screen */
+@media screen and (min-width: 1200px) {
+    .nav-section {
+    /* Toggled off nav-menu is displayed here after the min screen-size hits 1000px */
+    width: 90%;
+    margin: 0 auto;
+    /* border: 2px solid black; */
+
+    & .nav-menu {
+        display: block;
+
+        & .nav-menu-list {
+            display: flex;
+            list-style-type: none;
+            gap: 1.4em;
+            font-size: 17px;
+
+            & :nth-child(1) {
+                color: #cf4222;
+            }
+        }
+    }
+
+    /* hamburger menu off */
+    & .collapse-menu > span:nth-child(3) {
+        display: none;
+    }
+    /* user menu on */
+    & .collapse-menu > span:nth-child(4) {
+        display: inline-block;
+    }
+
+}
+    
+    .slider-menu-section {
+    /* new stuff */
+    padding: 2em 1em 5em;
+
+    & .slider-menu-container {
+        /* new stuff */
+        width: 80%;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1em;
+
+        & .menu-item {
+            /* new stuff */
+            max-height: 50vh;
+            /* -------- */
+
+            & img {
+                /* new stuff */
+                height: 45vh;
+                /* ------------ */
+            }
+
+        }
+
+    }
+}
+
+    /* scrollable menu at 1200px */
+    .card-section {
+    padding: 0.8em;
+
+    & .card-items {
+        /* new stuff */
+        padding: 0.5em 0;
+        overflow-x: auto; 
+        display: flex;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        gap: 1em;
+        align-items: center;
+        scrollbar-width: thin;
+        scrollbar-color: #123026 #f3f3f3;
+
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #123026;
+            border-radius: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #f3f3f3;
+        }
+
+        & .cards {
+            /* new stuff */
+            max-width: 320px;
+            flex: 0 0 auto; /*This is important to make the boxes to not lose width*/
+            gap: 1em;
+            align-items: center;
+
+            & img {
+                /* new stuff */
+                height: 40vh;
+            }
+            & .card-item-header {
+                font-weight: 600;
+            }
+
+            & span > i {
+                font-size: 16px;
+            }
+        }
+    }
+
+    }
+
+    .bestseller-slider-menu-section {
+
+    & .slider-cards-container {
+        /* new stuff */
+        max-width: 85%;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        /* border: 2px solid red; */
+        /* ---------------- */
+        gap: 0.5em;
+
+        & .slider-cards {
+            background: #f3f3f3;
+            height: auto;
+            /* border: 2px dashed violet; */
+            width: 100%;
+            overflow: hidden;
+
+            & img {
+                max-height: 50vh;
+                width: 100%;
+                overflow: hidden;
+            }
+            
+            & p {
+                padding: 2em 1.5em;
+                line-height: 2;
+            }
+        }
+    }
+}
+}
