@@ -628,7 +628,7 @@ body {
             gap: 2.5em;
             
             & :nth-child(1) {
-                font-size: clamp(1em, 1.2em + 2vw, 1.6em);
+                font-size: clamp(1em, 1.4em + 2vw, 1.9em);
                 font-weight: 500;
                 font-family: "Michroma", sans-serif;
                 color: var(--footer-font-color);
